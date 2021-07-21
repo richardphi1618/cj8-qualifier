@@ -1,16 +1,16 @@
 from typing import Any, List, Optional
 from terminaltables import SingleTable
 
-def make_table(rows: List[List[Any]], labels: Optional[List[Any]] = None, centered: bool = False) -> str:
+def make_table(rows: List[List[Any]], labels: Optional[List[Any]] = None, centered: bool = False) -> Optional[str]:
 
     example_table = rows
     example_table.insert(0,labels)
 
     table_instance = SingleTable(example_table)
     if centered:
-        for i in range(0, len(labels)):
-            table_instance.justify_columns[i] = 'center'
-            print(i)
+        for idx, i in enumerate(labels):
+            table_instance.justify_columns[idx] = 'center'
+            print(idx)
     print(table_instance.table)
 
     return None

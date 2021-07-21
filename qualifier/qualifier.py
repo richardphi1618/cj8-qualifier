@@ -120,8 +120,6 @@ def make_table(rows: List[List[Any]], labels: Optional[List[Any]] = None, center
 
 
 if __name__ == "__main__":
-
-
     rows = [
         ["Apple", 5, 70]
     ]

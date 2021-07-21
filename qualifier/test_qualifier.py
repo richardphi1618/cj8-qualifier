@@ -5,8 +5,6 @@ from dataclasses import dataclass
 
 from qualifier import make_table
 from solution import make_table as solution
-
-
 @dataclass
 class TableParams:
     rows: List[List[Any]]
@@ -301,3 +299,7 @@ class MakeTableTests(unittest.TestCase):
 
         self.assertEqual(make_table(rows), solution(rows))
         self.assertEqual(make_table(rows, centered=True), solution(rows, centered=True))
+
+
+if __name__ == '__main__':
+    unittest.main()
