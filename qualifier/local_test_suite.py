@@ -762,3 +762,6 @@ class MakeTableTests(unittest.TestCase):
 
         for case in cases:
             self.run_against_solution(case, fail_msg="Couldn't handle lots of cols.")
+
+if __name__ == "__main__":
+    unittest.main()
